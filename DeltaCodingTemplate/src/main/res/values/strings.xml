@@ -3,6 +3,12 @@
 
     <string name="app_name">DeltaCodingTemplate</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string-array name="input">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
 
 </resources>
