@@ -21,9 +21,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/messageView"
-        android:layout_alignParentTop="true"
+        android:id="@+id/outcomeView"
+        android:layout_below="@id/imageView"
         android:layout_centerHorizontal="true"
+        android:text="not complete"
+        android:layout_marginTop="12dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/messageView"
+        android:layout_below="@id/outcomeView"
+        android:layout_centerHorizontal="true"
+        android:text="Read the activity description again"
         android:layout_marginTop="12dp" />
 
 

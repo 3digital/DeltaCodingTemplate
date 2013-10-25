@@ -5,11 +5,13 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
     int levelComplete;
-    final String[] input;
+    String[] input;
+    private String message;
 
     public MainActivity() {
         input = new String[] {
@@ -22,58 +24,46 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
         levelComplete = 0;
 
         JavaWriting j = new JavaWriting();
 
-//        if(j.reverseString("abc") == "cba")
-//        {
-//
-//        }else if(j == null){
-//
-//        }else{
-//
-//        }
-
-
-        displayCompletionLevel(0);
-
-
+        displayCompletionLevel(3 , "Good but you can do better");
 
 
     }
 
+    private void displayCompletionLevel(int input , String message){
 
 
-
-    private void displayCompletionLevel(int input){
-
-
-
-        String outputMessage = "";
+        String outcomeMessage = "";
         Drawable d = null;
         if(input == 0) {
             d = getResources().getDrawable(R.drawable.dpred);
-            outputMessage = "not complete";
+            outcomeMessage = "Not Complete";
         }else if(input == 1) {
             d = getResources().getDrawable(R.drawable.dpblue);
+            outcomeMessage = "Complete";
         }else if(input == 2) {
-            d = getResources().getDrawable(R.drawable.dpyellow);
-        }else if(input == 3){
             d = getResources().getDrawable(R.drawable.dpgreen);
+            outcomeMessage = "Excellent";
+        }else if(input == 3){
+            d = getResources().getDrawable(R.drawable.dpyellow);
+            outcomeMessage = "Perfect";
         }
 
 
         ImageView logo = (ImageView) findViewById(R.id.imageView);
         logo.setImageDrawable(d);
 
-        //also set a string message
+        TextView myTextView = (TextView) findViewById(R.id.outcomeView);
+        myTextView.setText(outcomeMessage);
+
+        TextView myTextView1 = (TextView) findViewById(R.id.messageView);
+        myTextView1.setText(message);
 
 
     }
-
 
 
     @Override
