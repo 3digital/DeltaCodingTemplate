@@ -9,12 +9,12 @@ import android.widget.ImageView;
 public class MainActivity extends Activity {
 
     int levelComplete;
-//    final String[] input;
-//
-//    public MainActivity() {
-//        input = new String[] {
-//                "A","B","C","D", };
-//    }
+    final String[] input;
+
+    public MainActivity() {
+        input = new String[] {
+                "A","B","C","D", };
+    }
 
 
     @Override
@@ -27,6 +27,7 @@ public class MainActivity extends Activity {
 //        logo.setImageResource(R.drawable.dpblue);
 //        logo.setImageResource(R.drawable.dpred);
 //        logo.setImageResource(R.drawable.dpyellow);
+
 
 
 
@@ -49,12 +50,14 @@ public class MainActivity extends Activity {
 //        }
 
 
-        displayCompletionLevel(0);
+        displayCompletionLevel(1);
 
 
 
 
     }
+
+
 
 
     private int displayCompletionLevel(int input){
