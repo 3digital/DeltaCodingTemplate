@@ -22,18 +22,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView logo = (ImageView) findViewById(R.id.imageView);
-//        logo.setImageResource(R.drawable.dpgreen);
-//        logo.setImageResource(R.drawable.dpblue);
-//        logo.setImageResource(R.drawable.dpred);
-//        logo.setImageResource(R.drawable.dpyellow);
-
-
-
-
-
-
-
 
 
         levelComplete = 0;
@@ -50,7 +38,7 @@ public class MainActivity extends Activity {
 //        }
 
 
-        displayCompletionLevel(1);
+        displayCompletionLevel(0);
 
 
 
@@ -60,27 +48,28 @@ public class MainActivity extends Activity {
 
 
 
-    private int displayCompletionLevel(int input){
+    private void displayCompletionLevel(int input){
 
+
+
+        String outputMessage = "";
+        Drawable d = null;
         if(input == 0) {
-            Drawable d = getResources().getDrawable(R.drawable.dpred);
+            d = getResources().getDrawable(R.drawable.dpred);
+            outputMessage = "not complete";
         }else if(input == 1) {
-            Drawable d = getResources().getDrawable(R.drawable.dpblue);
+            d = getResources().getDrawable(R.drawable.dpblue);
         }else if(input == 2) {
-            Drawable d = getResources().getDrawable(R.drawable.dpyellow);
+            d = getResources().getDrawable(R.drawable.dpyellow);
         }else if(input == 3){
-            Drawable d = getResources().getDrawable(R.drawable.dpgreen);
+            d = getResources().getDrawable(R.drawable.dpgreen);
         }
 
-        return levelComplete;
 
+        ImageView logo = (ImageView) findViewById(R.id.imageView);
+        logo.setImageDrawable(d);
 
-
-
-        //if the level is 0 , display a red logo
-        //if the level is 1, display a green logo
-        //if the level is 2, display blue logo
-        //if the level is 3, display yellow logo
+        //also set a string message
 
 
     }
