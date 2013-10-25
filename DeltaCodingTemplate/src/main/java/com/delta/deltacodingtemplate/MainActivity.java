@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
 
         JavaWriting j = new JavaWriting();
 
-        displayCompletionLevel(3 , "Good but you can do better");
+        displayCompletionLevel(0 , "Good but you can do better");
 
 
     }
